@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_lockers/models/fields">
+		<field
+				name="id"
+				type="hidden"
+				/>
+                <field 	name="MemberID"
+		       			type="memberlist"
+		       			description="Member Listing"
+                       	label="Member ID"
+                />
+                <field name="LockerNumber" type="integer" 
+                       label="Locker Number"
+                       class="readonly"                       
+                       description="Locker Number"
+                       readonly="true"
+                       first="1"
+                       last="50" step="1" />
+               <field
+					name="BilledAnnually"
+					type="text"
+					label="Billed Annually"
+					description="Is the locker billed annually"
+					size="10"
+				/>
+		
+		 		<field
+				name="BilledAnnually"
+				type="list"
+				label="Billed Annually"
+				description="Is the locker billed annually"
+				default="Yes"
+				>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+                <field
+					name="Comment"
+					type="text"
+					label="Comment"
+					description="Add Comment"
+					size="40"
+					class="inputbox"
+					default=""
+				/>
+                <field name="lastyear" type="Text" 
+                       label="Last Year"
+                       description="" size="10"
+                        />
+                <field name="yearpaid" type="Text" 
+                       label="Year Paid to"
+                       description=""
+                       size="10" />
+                
+				<field
+				name="CurrentSubsPaid"
+				type="list"
+				label="Current Subs Paid"
+				description="Have this years subs been paid?"
+				default="No"
+				>
+					<option value="No">No</option>
+					<option value="Yes">Yes</option>
+				</field>
+                <field
+						name="lastmodified"
+						type="calendar"
+						class="readonly"
+						label="last modified"
+						description=""
+						readonly="true"
+						format="%Y-%m-%d %H:%M:%S"
+						size="22"
+						filter="user_utc"
+				/>
+	</fieldset>
+</form>

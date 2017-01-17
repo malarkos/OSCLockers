@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_lockers/models/fields">
+				<field
+					name="id"
+					type="hidden"
+				/>
+                <field 	name="MemberID"
+		       			type="memberlist"
+		       			description="Member Listing"
+                       	label="Member"
+                />
+                 <field
+						name="DateAdded"
+						type="calendar"
+			
+						label="Date Added"
+						description="Date Added"
+						default="NOW"
+						format="%Y-%m-%d %H:%M:%S"
+						size="22"
+						filter="user_utc"
+				/>
+               
+		
+                <field
+					name="Comment"
+					type="text"
+					label="Comment"
+					description="Add Comment"
+					size="40"
+					class="inputbox"
+					default=""
+				/>
+                <field
+				name="Allocated"
+				type="list"
+				label="Allocated"
+				description="Has locker been allocated?" 
+				class="inputbox"
+				default="No"
+				>
+					<option value="No">No</option>
+					<option value="Yes">Yes</option>
+				</field>
+				
+                <field
+						name="lastmodified"
+						type="calendar"
+						class="readonly"
+						label="last modified"
+						description=""
+						readonly="true"
+						format="%Y-%m-%d %H:%M:%S"
+						size="22"
+						filter="user_utc"
+				/>
+	</fieldset>
+</form>
