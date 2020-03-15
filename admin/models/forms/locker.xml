@@ -16,7 +16,7 @@
                        description="Locker Number"
                        readonly="true"
                        first="1"
-                       last="50" step="1" />
+                       last="55" step="1" />
                <field
 					name="BilledAnnually"
 					type="text"

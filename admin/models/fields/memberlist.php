@@ -35,7 +35,11 @@ class JFormFieldMemberList extends JFormFieldList
 	{
 		$db    = JFactory::getDBO();
 		$query = $db->getQuery(true);
+		// Use members instead of OSCMembers
+		//$query->select('id,concat(memberfirstname," ",membersurname) as membername');
+		
 		$query->select('id,concat(memberfirstname," ",membersurname) as membername');
+		
 		$query->from('oscmembers as m');  // use new members table
         $query->order('memberfirstname ASC');
 		$db->setQuery((string) $query);
